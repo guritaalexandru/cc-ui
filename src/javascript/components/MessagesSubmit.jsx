@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import { LANGUAGES_ARRAY, DEFAULT_MAIL } from '../utils/constants';
-import { API_URL } from '../../env';
 
 function MessagesSubmit() {
 
@@ -13,7 +12,7 @@ function MessagesSubmit() {
 
         try {
             let response = await axios.post(
-                `${API_URL}/messages/foreign`,
+                `${process.env.API_URL}/messages/foreign`,
                 {
                     language,
                     senderName,

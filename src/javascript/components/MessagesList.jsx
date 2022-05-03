@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { UserIcon } from '@heroicons/react/solid'
 import axios from 'axios';
-import { API_URL } from '../../env';
 
 // const messages = [
 //     {
@@ -18,7 +17,7 @@ function MessagesList() {
     useEffect(() => {
         const fetchData = async () => {
             const result = await axios.get(
-                `${API_URL}/messages`,
+                `${process.env.API_URL}/messages`,
             );
 
             if (result.data.messages) {
