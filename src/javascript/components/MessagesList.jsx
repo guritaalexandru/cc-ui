@@ -17,7 +17,7 @@ function MessagesList() {
     useEffect(() => {
         const fetchData = async () => {
             const result = await axios.get(
-                `${process.env.API_URL}/messages`,
+                `${process.env.REACT_APP_API_URL}/messages`,
             );
 
             if (result.data.messages) {

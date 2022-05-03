@@ -12,7 +12,7 @@ function MessagesSubmit() {
 
         try {
             let response = await axios.post(
-                `${process.env.API_URL}/messages/foreign`,
+                `${process.env.REACT_APP_API_URL}/messages/foreign`,
                 {
                     language,
                     senderName,
